@@ -1,2 +1,2 @@
-# blog-tin-tuc-laravel
-Blog Tin Tức Bằng Laravel
+# Blog Tin Tức Laravel
+Blog Tin Tức Laravel
