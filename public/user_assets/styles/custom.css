@@ -1,0 +1,105 @@
+.header_nav_container
+{
+    margin-top: 0px !important;
+}
+
+.second-level-menu
+{
+    position: absolute;
+    background: white;
+    display: none;
+}
+
+.second-level-menu > li:first-child
+{
+    padding-top: 10px;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 50px;
+    background: #fff;
+    width: 100%;
+    line-height: 50px;
+}
+
+.top-level-menu li:hover > ul
+{
+    display: block;
+}
+
+.top-level-menu a
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+}
+
+.avatar-upload {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.avatar-icon {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    display: none;
+}
+
+.des {
+    background: gainsboro;
+    border-radius: 25px;
+    width: auto;
+    padding: 5px 10px 5px 10px;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.cat-name {
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold
+}
+
+.preload {
+    z-index: 1200;
+    background: #ffffff00;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.preload img {
+    background: black;
+    width: 300px;
+    height: 100px;
+    opacity: 0.7;
+    padding: 10px 100px;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+img.avatar-circle {
+    width: 100%;
+}
+
+.tags {
+    margin-top: 52px;
+}
+
+.pagination {
+    font-size: 20px;
+}

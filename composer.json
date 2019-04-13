@@ -38,6 +38,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/functions/resize.php"
         ]
     },
     "autoload-dev": {
