@@ -38,29 +38,50 @@ class AppServiceProvider extends ServiceProvider
 
     private function getListCategoriesWithChildren()
     {
-        return Category::with('children')->where([
-            ['parent_id', 0],
-            ['visibility', 1]
-        ])->orderby('order')->take(5)->get();
+        if (Schema::hasTable('categories')) {
+            return Category::with('children')->where([
+                ['parent_id', 0],
+                ['visibility', 1]
+            ])->orderby('order')->take(5)->get();
+
+        } else {
+            return null;
+        }
     }
 
     private function getSliders()
     {
-        return Slide::orderby('order')->where('visibility', 1)->get();
+        if (Schema::hasTable('slides')) {
+            return Slide::orderby('order')->where('visibility', 1)->get();
+        } else {
+            return null;
+        }
     }
 
     private function getMostViews()
     {
-        return Article::with('category')->where('cat_id', '!=', '4')->orderby('view', 'desc')->take(3)->get();
+        if (Schema::hasTable('articles')) {
+            return Article::with('category')->where('cat_id', '!=', '4')->orderby('view', 'desc')->take(3)->get();
+        } else {
+            return null;
+        }
     }
 
     private function getVides()
     {
-        return Article::where('cat_id', '4')->orderby('created_at', 'desc')->take(4)->get();
+        if (Schema::hasTable('articles')) {
+            return Article::where('cat_id', '4')->orderby('created_at', 'desc')->take(4)->get();
+        } else {
+            return null;
+        }
     }
 
     private function getAd()
     {
-        return Ad::inRandomOrder()->first();
+        if (Schema::hasTable('ads')) {
+            return Ad::inRandomOrder()->first();
+        } else {
+            return null;
+        }
     }
 }

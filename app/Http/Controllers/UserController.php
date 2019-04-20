@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use App\User;
 use App\Article;
 use App\Comment;
@@ -19,25 +20,32 @@ class UserController extends Controller
 {
     public function showHome()
     {
-        $highlight_articles = Article::with('category', 'user', 'comment')
-        ->where([
-            ['is_highlight', '=', '1'],
-            ['cat_id', '!=', '4'],
-        ])
-        ->orderby('created_at', 'desc')
-        ->take(3)
-        ->get();
-        $new_articles = Article::with('category')
-        ->where('cat_id', '!=', '4')
-        ->orderby('created_at', 'desc')
-        ->take(10)
-        ->get();
-        $random_articles = Article::with('category')
-        ->inRandomOrder()
-        ->where('cat_id', '!=', '4')
-        ->orderby('created_at')
-        ->take(2)
-        ->get();
+        if (Schema::hasTable('articles')) {
+            $highlight_articles = Article::with('category', 'user', 'comment')
+            ->where([
+                ['is_highlight', '=', '1'],
+                ['cat_id', '!=', '4'],
+            ])
+            ->orderby('created_at', 'desc')
+            ->take(3)
+            ->get();
+            $new_articles = Article::with('category')
+            ->where('cat_id', '!=', '4')
+            ->orderby('created_at', 'desc')
+            ->take(10)
+            ->get();
+            $random_articles = Article::with('category')
+            ->inRandomOrder()
+            ->where('cat_id', '!=', '4')
+            ->orderby('created_at')
+            ->take(2)
+            ->get();
+        } else {
+            $highlight_articles = null;
+            $new_articles = null;
+            $random_articles = null;
+        }
+
         return view('home', compact('highlight_articles', 'new_articles', 'random_articles'));
     }
 
