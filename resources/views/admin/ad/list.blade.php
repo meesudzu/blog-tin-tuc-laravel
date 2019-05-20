@@ -36,7 +36,7 @@
                                 <tr>
                                     <td>{{ $ad->id }}</td>
                                     <td>{{ $ad->name }}</td>
-                                    <td><img src="{{ asset('upload/ad') }}/{{ $ad->img }}" alt="" width="100"></td>
+                                    <td><img src="{{ asset('public/upload/ad') }}/{{ $ad->img }}" alt="" width="100"></td>
                                     <td>{{ $ad->note }}</td>
                                     <td>{{ $ad->order }}</td>
                                     @if($ad->visibility == 0)

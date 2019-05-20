@@ -38,7 +38,7 @@
                                     <td>{{ $article->id }}</td>
                                     <td>{{ $article->title }}</td>
                                     <td>
-                                        <img src="{{ asset('upload/article') }}/{{ $article->thumb }}" width="40" height="40">
+                                        <img src="{{ asset('public/upload/article') }}/{{ $article->thumb }}" width="40" height="40">
                                         <span>{{ $article->summary }}</span>
                                     </td>
                                     <td>{{ $article->cat_id }}</td>

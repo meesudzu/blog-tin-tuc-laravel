@@ -37,7 +37,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->name }}</td>
-                                    <td><img src="{{ asset('upload/avatar') }}/{{ $user->avatar }}" width="30" height="30"></td>
+                                    <td><img src="{{ asset('public/upload/avatar') }}/{{ $user->avatar }}" width="30" height="30"></td>
                                     <td>{{ $user->permission->name }}</td>
                                     @if($user->status == 0)
                                         <td>Khóa</td>

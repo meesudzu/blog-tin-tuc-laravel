@@ -37,7 +37,7 @@
                                     <td>{{ $slide->id }}</td>
                                     <td>{{ $slide->title }}</td>
                                     <td>{{ $slide->description }}</td>
-                                    <td><img src="{{ asset('upload/slide') }}/{{ $slide->img }}" alt="" width="100" height="50"></td>
+                                    <td><img src="{{ asset('public/upload/slide') }}/{{ $slide->img }}" alt="" width="100" height="50"></td>
                                     <td>{{ $slide->order }}</td>
                                     @if($slide->visibility == 0)
                                     <td>Ẩn</td>
