@@ -2,8 +2,8 @@
 
 @section('style')
 
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/contact.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/contact.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/contact_responsive.css">
 
 @endsection
 
@@ -26,6 +26,6 @@
 
 @section('script')
 
-<script src="{{ asset('user_assets') }}/js/init.js"></script>
+<script src="{{ asset('public/user_assets') }}/js/init.js"></script>
 
 @endsection

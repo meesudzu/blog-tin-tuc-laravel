@@ -2,11 +2,11 @@
 
 @section('style')
 
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/responsive.css">
 
 @endsection
 
@@ -52,13 +52,13 @@
                                 @if($key == 0)
                                 <!-- Post -->
                                 <div class="post_item post_v_large d-flex flex-column align-items-start justify-content-start">
-                                    <div class="post_image"><img src="{{ asset('upload/article') }}/{{ $article->thumb }}"></div>
+                                    <div class="post_image"><img src="{{ asset('public/upload/article') }}/{{ $article->thumb }}"></div>
                                     <div class="post_content">
                                         <div class="post_category cat_technology"><a href="{{ url('category') }}/{{ $article->category->slug }}">{{ $article->category->name }}</a></div>
                                         <div class="post_title"><a href="{{ url('article') }}/{{ $article->slug }}">{{ $article->title }}</a></div>
                                         <div class="post_info d-flex flex-row align-items-center justify-content-start">
                                             <div class="post_author d-flex flex-row align-items-center justify-content-start">
-                                                <div><div class="post_author_image"><img src="{{ asset('upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
+                                                <div><div class="post_author_image"><img src="{{ asset('public/upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
                                                 <div class="post_author_name"><a href="#">{{ $article->user->name }}</a></div>
                                             </div>
                                             <div class="post_date"><a href="#">{{ date('d-m-Y H:i', strtotime($article->created_at)) }}</a></div>
@@ -74,13 +74,13 @@
                                 @else
                                 <!-- Post -->
                                 <div class="post_item post_v_small d-flex flex-column align-items-start justify-content-start">
-                                    <div class="post_image"><img src="{{ asset('upload/article') }}/{{ $article->thumb }}"></div>
+                                    <div class="post_image"><img src="{{ asset('public/upload/article') }}/{{ $article->thumb }}"></div>
                                     <div class="post_content">
                                         <div class="post_category cat_world"><a href="{{ url('category') }}/{{ $article->category->slug }}">{{ $article->category->name }}</a></div>
                                         <div class="post_title"><a href="{{ url('article') }}/{{ $article->slug }}">{{ $article->title }}</a></div>
                                         <div class="post_info d-flex flex-row align-items-center justify-content-start">
                                             <div class="post_author d-flex flex-row align-items-center justify-content-start">
-                                                <div><div class="post_author_image"><img src="{{ asset('upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
+                                                <div><div class="post_author_image"><img src="{{ asset('public/upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
                                                 <div class="post_author_name"><a href="#">{{ $article->user->name }}</a></div>
                                             </div>
                                             <div class="post_date"><a href="#">{{ date('d-m-Y', strtotime($article->created_at)) }}</a></div>
@@ -112,7 +112,7 @@
                             <div class="post_item post_h_large">
                                 <div class="row">
                                     <div class="col-lg-5">
-                                        <div class="post_image"><img src="{{ asset('upload/article') }}/{{ $article->thumb }}"></div>
+                                        <div class="post_image"><img src="{{ asset('public/upload/article') }}/{{ $article->thumb }}"></div>
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="post_content">
@@ -120,7 +120,7 @@
                                             <div class="post_title"><a href="{{ url('article') }}/{{ $article->slug }}">{{ $article->title }}</a></div>
                                             <div class="post_info d-flex flex-row align-items-center justify-content-start">
                                                 <div class="post_author d-flex flex-row align-items-center justify-content-start">
-                                                    <div><div class="post_author_image"><img src="{{ asset('upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
+                                                    <div><div class="post_author_image"><img src="{{ asset('public/upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
                                                     <div class="post_author_name"><a href="#">{{ $article->user->name }}</a></div>
                                                 </div>
                                                 <div class="post_date"><a href="#">{{ date('d-m-Y H:i', strtotime($article->created_at)) }}</a></div>
@@ -156,13 +156,13 @@
                                     <div class="col-lg-6">
                                         <!-- Post -->
                                         <div class="post_item post_v_med d-flex flex-column align-items-start justify-content-start">
-                                            <div class="post_image"><img src="{{ asset('upload/article') }}/{{ $article->thumb }}"></div>
+                                            <div class="post_image"><img src="{{ asset('public/upload/article') }}/{{ $article->thumb }}"></div>
                                             <div class="post_content">
                                                 <div class="post_category cat_world"><a href="{{ url('category') }}/{{ $article->category->slug }}">{{ $article->category->name }}</a></div>
                                                 <div class="post_title"><a href="{{ url('article') }}/{{ $article->slug }}">{{ $article->title }}</a></div>
                                                 <div class="post_info d-flex flex-row align-items-center justify-content-start">
                                                     <div class="post_author d-flex flex-row align-items-center justify-content-start">
-                                                        <div><div class="post_author_image"><img src="{{ asset('upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
+                                                        <div><div class="post_author_image"><img src="{{ asset('public/upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
                                                         <div class="post_author_name"><a href="#">{{ $article->user->name }}</a></div>
                                                     </div>
                                                     <div class="post_date"><a href="#">{{ date('d-m-Y H:i', strtotime($article->created_at)) }}</a></div>

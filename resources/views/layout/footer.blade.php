@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="footer_content">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('user_assets') }}/images/footer.jpg" data-speed="0.8"></div>
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ asset('public/user_assets') }}/images/footer.jpg" data-speed="0.8"></div>
         <div class="container">
             <div class="row">
                 <div class="col text-center">

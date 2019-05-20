@@ -2,8 +2,8 @@
 
 @section('style')
 
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/single.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/single_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/single.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/single_responsive.css">
 
 @endsection
 
@@ -26,7 +26,7 @@
                         <div class="post_title"><a href="{{ url('article') }}/{{ $article->slug }}">{{ $article->title }}</a></div>
                         <div class="post_info d-flex flex-row align-items-center justify-content-start">
                             <div class="post_author d-flex flex-row align-items-center justify-content-start">
-                                <div><div class="post_author_image"><img src="{{ asset('upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
+                                <div><div class="post_author_image"><img src="{{ asset('public/upload/avatar') }}/{{ $article->user->avatar }}" class="avatar-circle"></div></div>
                                 <div class="post_author_name"><a href="#">{{ $article->user->name }}</a></div>
                             </div>
                             <div class="post_date"><a href="#">{{ date('d-m-Y', strtotime($article->created_at)) }}</a></div>
@@ -64,7 +64,7 @@
                                 <!-- Comment -->
                                 <li class="comment">
                                     <div class="comment_info d-flex flex-row align-items-center justify-content-start">
-                                        <div><div class="comment_image"><img src="{{ asset('upload/avatar') }}/{{ $comment->user->avatar }}" class="avatar-circle"></div></div>
+                                        <div><div class="comment_image"><img src="{{ asset('public/upload/avatar') }}/{{ $comment->user->avatar }}" class="avatar-circle"></div></div>
                                         <div class="comment_author"><a href="#">{{ $comment->user->name }}</a></div>
                                     </div>
                                     <div class="comment_content">

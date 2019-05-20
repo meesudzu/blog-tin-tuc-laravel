@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "/var/www/html/nothing"
+		}
+	],
+	"settings":
+	{
+		"xdebug":
+		{
+			"url": "http://blog/"
+		}
+	}
+}

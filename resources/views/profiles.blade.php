@@ -2,8 +2,8 @@
 
 @section('style')
 
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/contact.css">
-<link rel="stylesheet" type="text/css" href="{{ asset('user_assets') }}/styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/contact.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('public/user_assets') }}/styles/contact_responsive.css">
 
 @endsection
 
@@ -32,7 +32,7 @@
             <div class="col-lg-6 contact_col">
                 <div class="avatar-upload" id="avatar-upload">
                     <center>
-                        <img src="{{ asset('upload/avatar') }}/{{ Auth::user()->avatar }}" alt="Avatar" class="avatar" id="avatar">
+                        <img src="{{ asset('public/upload/avatar') }}/{{ Auth::user()->avatar }}" alt="Avatar" class="avatar" id="avatar">
                         <img src="https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Camera-512.png" alt="" class="avatar-icon" id="avatar-icon">
                         <form action="{{ url('updateAvatar') }}" method="POST" enctype="multipart/form-data" id="form-update">
                             {{ csrf_field() }}
@@ -98,7 +98,7 @@
                     var json_data = jQuery.parseJSON(result);
                     console.log(json_data)
                     if(json_data.status)
-                        avatar.attr('src', '{{ asset('upload/avatar') }}/' + json_data.response);
+                        avatar.attr('src', '{{ asset('public/upload/avatar') }}/' + json_data.response);
                     else
                         alert(json_data.response)
                 },

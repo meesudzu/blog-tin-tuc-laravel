@@ -35,7 +35,7 @@
                 @foreach($videos as $video)
                 <!-- Video -->
                 <div class="latest_post d-flex flex-row align-items-start justify-content-start">
-                    <div><div class="latest_post_image"><img src="{{ asset('upload/article') }}/{{ $video->thumb }}" style="height: 100%; width: 100%;"></div></div>
+                    <div><div class="latest_post_image"><img src="{{ asset('public/upload/article') }}/{{ $video->thumb }}" style="height: 100%; width: 100%;"></div></div>
                     <div class="latest_post_content">
                         <div class="latest_post_title"><a href="{{ url('article') }}/{{ $video->slug }}">{{ $video->title }}</a></div>
                         <div class="latest_post_date">{{ date('d-m-Y H:i', strtotime($video->created_at)) }}</div>
@@ -53,7 +53,7 @@
             <div class="sidebar_title">ADS</div>
 
                 @if(!empty($ad))
-                <img src="{{ asset('upload/ad') }}/{{ $ad->img }}" style="width: 100%; margin-top: 58px;">
+                <img src="{{ asset('public/upload/ad') }}/{{ $ad->img }}" style="width: 100%; margin-top: 58px;">
                 @endif
 
         </div>

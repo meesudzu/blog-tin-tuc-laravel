@@ -8,7 +8,7 @@
                 @foreach($sliders as $sl)
                     <!-- Slide -->
                     <div class="owl-item home_slider_item">
-                        <div class="background_image" style="background-image:url({{ asset('upload/slide') }}/{{ $sl->img }})"></div>
+                        <div class="background_image" style="background-image:url({{ asset('public/upload/slide') }}/{{ $sl->img }})"></div>
                         <div class="home_slider_content text-center">
                             <div class="home_slider_content_inner" data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
                                 <div class="home_category"><a>ads</a></div>
